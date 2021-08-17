@@ -1,0 +1,34 @@
+{
+  "env": {
+      "secret" : "JWT_Security-key-12367890",
+      "VIEW_URL" : "https://remuneration.csr-portal.com/",
+      "DB_HOST": "database-1.ci5o8gpnlfmy.ap-south-1.rds.amazonaws.com",
+      "DB_USER": "admin",
+      "DB_PASSWORD": "Akashamsreport1",
+      "DB": "ams_Services",
+      "DB_PORT": "3306",
+      "SUPPORT_EMAIL": "support@csr-portal.in",
+      "EMAIL_PWD" : "support@csr-portal",
+      "BASE_URL": "https://remuneration.csr-portal.com/nodalapi/users/api/getId/",
+      "REPORT_URL": "https://remuneration.csr-portal.com/nodalapi/pdfReports/ocReports/",
+      "BASE_PATH" : "https://remuneration.csr-portal.com/nodalapi/"
+  },
+
+  "env_davelopment_local": {
+      "secret" : "JWT_Security-key-12367890",
+      "VIEW_URL" : "http://csr-portal.com",
+      "DB_HOST": "localhost",
+      "DB_USER": "root",
+      "SUPPORT_EMAIL": "support@csr-portal.in",
+      "EMAIL_PWD" : "support@csr-portal",
+      "DB_PASSWORD": "",
+      "DB": "ams_Services",
+      "DB_PORT": "3306",
+      "BASE_URL": "http://localhost:3000/users/api/getId/",
+      "REPORT_URL": "http://localhost:3000/pdfReports/ocReports",
+      "BASE_PATH" : "http://localhost:3000/"
+  },
+
+  "secret" : "JWT_Security-key-12367890"
+
+}

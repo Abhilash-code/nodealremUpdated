@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "Akashamsreport1",
+    "database": "ams_Services",
+    "host": "database-1.ci5o8gpnlfmy.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+
+.main-table{
+  width: 100%;
+}
+
+.main-table2, .main-table2{
+  width: 100%;
+
+}
+.main-table2 td{
+  padding-top: 7px;
+
+}
+
+.main-table3 td{
+  padding-top: 7px;
+
+}
+
+.main-heading{
+  width: 100%;
+  text-align:center;
+  text-decoration: underline;
+}
+
+table td{
+  vertical-align: top;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<table class="main-table">
+<tr>
+  <td
+  colspan="3"
+  class="main-heading"
+  >
+    <h3>HARYANA STAFF SELECTION COMMISSION
+      <br><br>
+      OPENING CERTIFICATE
+    </h3>
+ </td>
+</tr>
+
+</table>
+
+<table class="main-table2">
+
+<tr>
+  <td style="width: 45%;">
+    CENTER:&nbsp; <b>{{ data.centerName }}</b>
+  </td>
+  <td style="width: 10%;">
+
+  </td>
+  <td style="width: 45%;">
+    DATE:&nbsp; <b>{{ data.examDate }}</b>
+  </td>
+</tr>
+
+
+<tr>
+  <td style="width: 45%;">
+    NAME OF POST:&nbsp; <b>{{ data.postName }}</b>
+  </td>
+  <td style="width: 10%;">
+
+  </td>
+  <td style="width: 45%;">
+    SESSION:&nbsp; <b>{{ data.session }}</b>
+  </td>
+</tr>
+
+<tr>
+  <td colspan="3" style="width: 100%; padding-top: 14px;">
+    Certified that the envelope-packet was found properly sealed and intact
+     and it was opened in our presence on <b style="white-space: pre;">{{ data.certificateOpeningDate|date('d-m-Y') }}</b>
+      at <b style="white-space: pre;">{{ data.certificateOpeningTime }}</b>.
+  </td>
+</tr>
+
+</table>
+
+
+<table class="main-table3">
+  <tr>
+    <td style="width: 60%; padding-top: 14px;"></td>
+    <td style="width: 40%; padding-top: 14px;">
+    <div style="width: 70%;  padding-top: 14px;">
+      <img src="{{data.center_Invig_Sign}}"
+      style="width: 100%;">
+    </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%;"></td>
+    <td style="width: 40%;">
+      Signature of Invigilator.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%; padding-top: 14px;"></td>
+    <td style="width: 40%; padding-top: 14px;">
+    <div style="width: 70%;  padding-top: 14px;">
+      <img src="{{data.CSR_Sign}}"
+      style="width: 100%;">
+    </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%;"></td>
+    <td style="width: 40%;">
+      Signature of Center Supdt.
+    </td>
+  </tr>
+
+
+  <tr>
+    <td style="width: 60%; padding-top: 14px;"></td>
+    <td style="width: 40%; padding-top: 14px;">
+    <div style="width: 70%;  padding-top: 14px;">
+      <img src="{{data.flying_Sqd_Sign}}"
+      style="width: 100%;">
+    </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%;"></td>
+    <td style="width: 40%;">
+      Signature of Flying Squad.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%; padding-top: 14px;"></td>
+    <td style="width: 40%; padding-top: 14px;">
+    <div style="width: 70%; padding-top: 14px;">
+      <img src="{{data.HSSC_Rep_Sign}}"
+      style="width: 100%;">
+    </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%;"></td>
+    <td style="width: 40%;">
+      Signature of HSSC Representative.
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td style="width: 60%; padding-top: 14px;"></td>
+    <td style="width: 40%; padding-top: 14px;">
+    <div style="width: 70%; padding-top: 14px;">
+      <img src="{{data.CSR_Photo}}"
+      style="width: 100%;">
+    </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%;"></td>
+    <td style="width: 40%;">
+      Photograph of Center Superintendent
+
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 60%; padding-top: 14px;"></td>
+    <td style="width: 40%; padding-top: 14px;">
+    <div style="width: 70%; padding-top: 14px;">
+      <img src="{{data.HSSC_Rep_Photo}}"
+
+      style="width: 100%;">
+    </div>
+    </td>
+  </tr>
+<!-- <img src="C:\Users\DELL\Downloads/exergy.png-1626167713529.png" -->
+  <tr>
+    <td style="width: 60%;"></td>
+    <td style="width: 40%;">
+      Photograph of HSSC Representative
+    </td>
+  </tr>
+
+
+  <tr>
+    <td style="width: 70%; padding-top: 14px;">Dated:&nbsp; <b>{{ data.dated|date('d-m-Y') }}</b></td>
+    <td style="width: 30%; padding-top: 14px;">
+    </td>
+  </tr>
+
+
+</table>
+
+
+</body></html>

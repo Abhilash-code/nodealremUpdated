@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+
+.main-table{
+  width: 100%;
+}
+
+.main-table2, .main-table2{
+  width: 100%;
+
+}
+.main-table2 td{
+  padding-top: 7px;
+
+}
+
+.main-table3{
+  width: 100%;
+
+}
+
+.main-table3 td{
+  padding-top: 7px;
+
+}
+
+.account-details-table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.account-details-table td{
+  padding-top: 10px;
+}
+
+.main-heading{
+  width: 100%;
+  text-align:center;
+  text-decoration: underline;
+}
+
+.width-45{
+  width: 45%;
+  vertical-align: top;
+}
+
+.width-10{
+  width: 10%;
+  vertical-align: top;
+}
+
+
+.sub-heading{
+  width: 100%;
+  text-align:center;
+  text-decoration: underline;
+}
+
+.renumeration-details-table{
+  width: 100%;
+  border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.renumeration-details-table tr, .renumeration-details-table th, .renumeration-details-table td {
+  border: 0.1em solid black;
+  padding: 0.5em;
+}
+
+
+.horizontal-line{
+  border: 1px solid black;
+  width: 100%;
+  margin: 20px 0;
+}
+
+table td{
+  vertical-align: top;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<table class="main-table">
+<tr>
+  <td
+  colspan="3"
+  class="main-heading"
+  >
+    <h3>HARYANA STAFF SELECTION COMMISSION, PANCHKULA
+      <br><br>
+      Remuneration (Nodal Officer/ Associate Staff/ Flying Squad/ T.O./ D.E.O)
+    </h3>
+ </td>
+</tr>
+
+</table>
+
+<table class="main-table2">
+
+  <tr>
+    <td colspan="3">
+      Name of Examination:&nbsp; <b>{{ data.nodalExaminationName }}</b>
+    </td>
+  </tr>
+
+<tr>
+  <td style="width: 45%;">
+    Advt. No.:&nbsp; <b>{{ data.nodalAdvtNo }}</b>
+  </td>
+  <td style="width: 10%;">
+
+  </td>
+  <td style="width: 45%;">
+    Cat. No.:&nbsp; <b>{{ data.nodalCatNo }}</b>
+  </td>
+</tr>
+
+
+  <tr>
+    <td colspan="3">
+      Date & time of Examination:&nbsp; <b>{{ data.nodalExamDateAndTime }}</b>
+    </td>
+  </tr>
+
+<tr>
+  <td colspan="3">
+    Session:&nbsp; <b>{{ data.shifts }}</b>
+  </td>
+</tr>
+
+<tr>
+  <td colspan="3" class="main-heading">
+    <h4>Detail of Remuneration paid/ recieved for the written examination</h4>
+  </td>
+</tr>
+
+</table>
+
+
+<table class="renumeration-details-table">
+<tr>
+  <th>Sr. No.</th>
+  <th>Name</th>
+  <th>Duty Performed as</th>
+  <th>Date</th>
+  <th>Amount to be Paid  <span style="white-space: pre;">(in Rs.)</th>
+</tr>
+
+{% for details in data.renumerationDetails %}
+<tr>
+  <td>{{loop.index}}</td>
+  <td>{{details.name}}</td>
+  <td>{{details.dutyPerformedAs}}</td>
+  <td>{{details.dutyPerformedDate}}</td>
+  <td>{{details.amount}}</td>
+</tr>
+
+{% endfor %}
+
+
+
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td style="text-align: right;"><b>Total = </b></td>
+  <td><strong>{{ data.totalamount }}</strong></td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+
+<table class="account-details-table">
+
+
+  <tr>
+<td colspan="3" style="width: 100%">
+  Paid Rs. <b>{{ data.totalAmount }}</b>
+  <b>(Rupees <b>{{ data.amountInWords }}</b> only)</b>.
+</td>
+  </tr>
+
+</table>
+
+
+<table class="table-width">
+
+  <tr>
+    <td class="width-45">
+      <table style="width: 100%;">
+                <tr>
+          <td colspan="3" style="width: 100%;">
+            <div style="width: 65%;  padding-top: 14px;">
+              <img src="{{data.signHssc_Rep}}"
+              style="width: 100%;">
+          </td>
+        </tr>
+      </table>
+
+    </td>
+    <td class="width-10"></td>
+    <td class="width-45">
+      <table class="signature-table">
+
+        <tr>
+          <td colspan="3" style="width: 100%;">
+            <div style="width: 65%;  padding-top: 14px;">
+              <img src="{{data.signNodelOfficer}}"
+              style="width: 100%;">
+             </div>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="width-45">Signature of official/ Representative from HSSC</td>
+    <td class="width-10"></td>
+    <td class="width-45">Signature of Nodal Officer</td>
+  </tr>
+
+</table>
+
+
+<table class="account-details-table">
+
+  <tr>
+    <td colspan="3" style="width: 100%">
+      ( Name : <b>{{ data.hsscRepresentative_name }}</b> )
+    </td>
+      </tr>
+
+
+  <tr>
+    <td colspan="3" style="width: 100%">
+      ( Name of Nodal Officer/ Representative/ T.O./ D.E.O:-
+      <b>{{ data.nodalOfficerAccountName }}</b> )
+    </td>
+      </tr>
+
+
+
+  <tr>
+    <td colspan="3" style="width: 100%">
+      ( District : <b>{{ data.district }}</b> )
+    </td>
+      </tr>
+
+
+
+  <tr>
+  <td colspan="3" style="width: 100%;">
+    Name of Account Holder:-&nbsp; <b>{{data.accountHolderName}}</b>
+
+
+  </td>
+</tr>
+
+<tr>
+  <td colspan="3" style="width: 100%;">
+    Account No. :-&nbsp; <b>{{data.accountNumber}}</b>
+  </td>
+</tr>
+
+<tr>
+  <td colspan="3" style="width: 100%;">
+    Name of Bank & Address :-&nbsp; <b>{{data.bankNameandAddress}}</b>
+
+
+  </td>
+</tr>
+
+<tr>
+  <td colspan="3" style="width: 100%;">
+    IFSC Code :-&nbsp; <b>{{data.IFSC}}</b>
+
+
+  </td>
+</tr>
+
+<tr>
+  <td colspan="3" style="width: 100%;">
+    MICR Code :-&nbsp; <b>{{data.micrCode}}</b>
+
+
+  </td>
+</tr>
+
+<tr>
+  <td colspan="3" style="width: 100%;">
+    PAN No. (Mandatory) :-&nbsp; <b>{{data.panNumber}}</b>
+
+
+  </td>
+</tr>
+
+
+<tr>
+  <td colspan="3" style="width: 100%;">
+    Payee Code :-&nbsp; <b>{{data.payeeCode}}</b>
+
+
+  </td>
+</tr>
+
+
+<tr>
+  <td style="width: 45%;">
+    E-Mail :-&nbsp; <b>{{data.email}}</b>
+
+  </td>
+  <td style="width: 10%;">
+
+
+  </td>
+  <td style="width: 45%;">
+    Mobile No :-&nbsp; <b>{{data.mobileNumber}}</b>
+
+  </td>
+</tr>
+
+</table>
+
+
+
+<table class="main-table3">
+  <tr>
+    <td style="width: 60%; padding-top: 14px;"></td>
+    <td style="width: 40%; padding-top: 14px;">
+      <div style="width: 70%;  padding-top: 14px;">
+        <img src="{{data.signNodelOfficer}}"
+        style="width: 100%;">
+      </div>
+    </td>
+  </tr>
+
+</table>
+
+
+<table class="account-details-table">
+
+    <tr>
+      <td style="width: 55%;" colspan="2"></td>
+      <td style="width: 45%;">
+        Signature of Nodal Officer
+      </td>
+    </tr>
+
+  <tr>
+    <td style="width: 45%;">
+
+    </td>
+    <td style="width: 10%;">
+
+
+    </td>
+    <td style="width: 45%;">
+      Name :-&nbsp; <b>{{ data.nodalOff_name }}</b>
+
+    </td>
+  </tr>
+
+
+  <tr>
+    <td style="width: 45%;">
+    </td>
+    <td style="width: 10%;">
+
+
+    </td>
+    <td style="width: 45%;">
+      Designation :-&nbsp; <b>{{ data.nodalOff_department }}</b>
+
+    </td>
+  </tr>
+
+
+
+  </table>
+</body></html>

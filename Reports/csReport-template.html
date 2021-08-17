@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+
+.main-table{
+  width: 100%;
+}
+
+.main-table2, .main-table2{
+  width: 100%;
+
+}
+.main-table2 td{
+  padding-top: 7px;
+
+}
+
+.main-table3 td{
+  padding-top: 7px;
+
+}
+
+.main-heading{
+  width: 100%;
+  text-align:center;
+  text-decoration: underline;
+}
+
+.table-width{
+  width: 100%;
+}
+
+.td1-width{
+  width: 5%;
+  vertical-align: top;
+  padding-top: 20px;
+}
+
+.td2-width{
+  width: 95%;
+  vertical-align: top;
+  padding-top: 16px;
+}
+
+.inner-table{
+  width: 100%;
+  vertical-align: top;
+}
+
+.width-45{
+  width: 45%;
+  vertical-align: top;
+}
+
+.width-10{
+  width: 10%;
+  vertical-align: top;
+}
+
+.width-70{
+  width: 60%;
+  vertical-align: top;
+}
+
+.width-5{
+  width: 5%;
+  vertical-align: top;
+}
+
+.width-25{
+  width: 35%;
+  vertical-align: top;
+}
+
+.width-30{
+  width: 30%;
+  vertical-align: top;
+}
+
+.width-65{
+  width: 65%;
+  vertical-align: top;
+}
+
+.signature-table
+{
+  width: 100%;
+}
+table td{
+  vertical-align: top;
+}
+
+
+
+.horizontal-line{
+  border: 1px solid black;
+  width: 100%;
+  margin: 30px 0;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<table class="main-table">
+<tr>
+  <td
+  colspan="3"
+  class="main-heading"
+  >
+    <h3>HARYANA STAFF SELECTION COMMISSION
+      <br><br>
+      CENTRE SUPERINTENDENT REPORT
+    </h3>
+ </td>
+</tr>
+
+</table>
+
+<table class="main-table2">
+
+<tr>
+  <td style="width: 18%;">
+    Centre Code:&nbsp; <b>{{ data.centerNumber }}</b>
+  </td>
+
+    <td style="width: 1%;">
+
+    </td>
+
+  <td style="width: 36%;">
+    Name of Post:&nbsp; <b>{{ data.postName }}</b>
+  </td>
+  <td style="width: 1%;">
+
+  </td>
+
+</td>
+<td style="width: 23%;">
+  Advt. No:&nbsp; <b>{{ data.advt_No }}</b>
+</td>
+<td style="width: 1%;">
+
+</td>
+
+</td>
+<td style="width: 20%;">
+  Cat No:&nbsp; <b>{{ data.cat_No }}</b>
+</td>
+</tr>
+
+</table>
+
+
+<table class="main-table2">
+
+  <tr>
+    <td style="width: 32%;">
+      Exam Date:&nbsp; <b>{{ data.examDate }}</b>
+    </td>
+    <td style="width: 2%;">
+
+    </td>
+    <td style="width: 32%;">
+      Time:&nbsp; <b>{{ data.examtime }}</b>
+    </td>
+
+    <td style="width: 2%;">
+
+    </td>
+    <td style="width: 32%;">
+      Session:&nbsp; <b>{{ data.session }}</b>
+    </td>
+  </tr>
+
+
+  </table>
+
+
+
+<table class="table-width">
+
+  <tr>
+    <td class="td1-width">
+      1. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="3" style="width: 100%;">
+            Total Nos. of Question Booklet/OMR Sheet supplied at the Centre:&nbsp;
+            <b>{{data.q_omr_supplied}}</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-45"><b>(i)</b>&nbsp; Nos. of Booklets used:&nbsp; <b>{{ data.bookletsused }}</b> </td>
+          <td class="width-10"></td>
+          <td class="width-45"><b>(ii)</b>&nbsp; Nos. of Original OMR Sheets collected:
+            &nbsp; <b>{{ data.OriginalOmrCollected }}</b> </td>
+        </tr>
+
+
+        <tr>
+          <td colspan="3" style="width: 100%;"><b>(iii)</b>&nbsp; Nos. of Commission's copy OMR Sheets collected:
+            &nbsp; <b>{{ data.Commissions_copyOmr }}</b> </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="width: 100%;"><b>(iv)</b>
+            &nbsp; Difference in <b>(ii)</b> and <b>(iii)</b>, if any, specify with candidate Roll No.:
+            &nbsp; <b>{{ data.diff_RollNo_Step1 }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td class="td1-width">
+      2. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="3" style="width: 100%;">
+            Total Nos. of unused Booklet:&nbsp;
+            <b>{{data.unused_Booklets}}</b>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td colspan="3"  style="width: 100%;"><b>(i)</b>&nbsp; Nos. of unused booklets sealed in the packet:
+            &nbsp; <b>{{ data.unused_Booklet_sealed_packet }}</b> </td>
+        </tr>
+
+        <tr>
+          <td colspan="3"  style="width: 100%;"><b>(ii)</b>
+            &nbsp; Difference, if any:
+            &nbsp; <b>{{ data.diffInRoll_no }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td class="td1-width">
+      3. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="3"  style="width: 100%;">
+            No. of OMR Sheets left fully blank by the Candidates and crossed &
+             signed by the invigilator & Countersigned by Centre Superintendent
+             (Mention with candidate's Roll No.):&nbsp;
+            <b>{{data.OMRleftBlankandCrossed}}</b>
+          </td>
+        </tr>
+
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      4. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="3"  style="width: 100%;">
+            If Question booklet of any candidate changed or not (Mention with
+            candidate's Roll No. and changed question booklet series):&nbsp;
+            <b>{{data.quesBookletChanged_rollno}}</b>
+          </td>
+        </tr>
+
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      5. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="3" style="width: 100%;">
+            Whether Rooms other than Examination Rooms were Locked:&nbsp;
+            <b>{{data.roomsLocked}}</b>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td class="width-45"><b>(i)</b>&nbsp; No. of rooms locked:
+            &nbsp; <b>{{ data.no_of_rooms_locked }}</b> </td>
+          <td class="width-10"></td>
+          <td class="width-45"><b>(ii)</b>&nbsp; No. of rooms used:
+            &nbsp; <b>{{ data.no_of_rooms_used }}</b> </td>
+        </tr>
+
+
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      6. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="3"  style="width: 100%;">
+            Whether the Washrooms & Other Premises were checked:&nbsp;
+            <b>{{data.washroom_checked}}</b>
+          </td>
+        </tr>
+
+
+      </table>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class="td1-width">
+      7. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="3" style="width: 100%;">
+            Attendance Sheet in respect of&nbsp;
+            <b>{{data.attendance}}</b>&nbsp; candidates.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-45"><b>(i)</b>&nbsp; Total No. of candidates appeared:
+            &nbsp; <b>{{ data.appearedCandidates }}</b> </td>
+          <td class="width-10"></td>
+          <td class="width-45"><b>(ii)</b>&nbsp; Nos. of candidates absent:
+            &nbsp; <b>{{ data.No_CandidatesAbsent }}</b> </td>
+        </tr>
+
+
+        <tr>
+          <td colspan="3" style="width: 100%;"><b>(iii)</b>&nbsp; Whether question paper of absentee
+             candidate failed in separate room wise envelope:
+            &nbsp; <b>{{ data.absentee_filled_roomwise }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      8. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+
+        <tr>
+          <td style="width: 100%;"><b>(i)</b>&nbsp; No. of PWD/PHC Candidates appeared:
+            &nbsp; <b>{{ data.PWD_Appeared }}</b> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 100%;"><b>(ii)</b>&nbsp; Extra time to PWD/PHC Candidates given or not:
+            &nbsp; <b>{{ data.extratime_for_pwd }}</b> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 100%;"><b>(iii)</b>&nbsp; Whether PWD/PHC Candidates were made to sit on Ground Floor:
+            &nbsp; <b>{{ data.pwdSitonGroundFloor }}</b> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 100%;"><b>(iv)</b>&nbsp; Original/Photostat ID proof of writer with two latest photograph:
+            &nbsp; <b>{{ data.idOfWriter }}</b> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      9. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+
+        <tr>
+          <td style="width: 100%;">Reporting time of Police team at Exam Centre:
+            &nbsp; <b>{{ data.policeReportingTime }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td class="td1-width">
+      10. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>QR Code Report</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Arrival time of team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.qrTeam_ArivalTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; Number of Machines:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_QR_Machines }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; Number of members in team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_Members_in_QRteam }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; QR code checking starting time:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.qrStartTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">e)&nbsp; Team I-cards checked or not:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.QrTeam_ID_Checked }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">f)&nbsp; Number of Candidates checked through QR Code:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_QR_Checked_Candidates }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">g)&nbsp; Number of mismatch cases (Roll No.):</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.qr_Missmatch }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      11. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>Biometric Report</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Arrival time of team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.bioMetricTeam_ArivalTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; Number of Machines:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_biometric_Machines }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; Number of members in team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_Members_in_biometricteam }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; Bio-metric checking starting time:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.biometricStartTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">e)&nbsp; Team I-cards checked or not:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.biometricTeam_ID_Checked }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">f)&nbsp; Device used for Bio-metric:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.Biometric_Device }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">g)&nbsp; Bio-metric done for how many candidates:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_Biometric_done }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      12. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>Videography Report</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Arrival time of team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.VideographyTeam_ArivalTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; Number of Video Cameras:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_Video_Cameras }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; Number of members in team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_Members_in_VideographyTeam }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; Videography starting time:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.VideographyStartTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">e)&nbsp; Team I-cards checked or not:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.VideographyTeam_ID_Checked }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">f)&nbsp; Number of candidates Videographed:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_videographed_candi }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">g)&nbsp; Videography done at:</td>
+          <td class="width-5"></td>
+          <td class="width-25"></td>
+        </tr>
+
+
+        <tr>
+          <td colspan="3" style="padding-top: 0;">
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 17%;">
+                 Entry : <b>{{ data.videography_at_Entry  }}</b></td>
+
+                <td style="width: 27%;">
+                  Opening of Paper : <b>{{ data.videography_at_OpeningOfPaper }}</b></td>
+
+                <td style="width: 26%;">
+                  Closing of Paper : <b>{{ data.videography_at_ClosingOfPaper }}</b> </td>
+
+                <td style="width: 30%;">
+                  Question Paper Vehicle : <b>{{ data.videography_at_QusPaper_Vehicle }}</b></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      13. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>Frisking Report</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Arrival time of team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.friskingTeam_ArivalTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; Number of members in team
+            <span style="white-space: pre;">(Male/Female)</span>:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_friskingteamMembers }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; Frisking starting time:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.friskingStartTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; Team I-cards checked or not:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.friskingTeam_ID_Checked }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">e)&nbsp; Number of candidates frisked:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_candidate_frisked }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">f)&nbsp; Whether staff deployed at Centre was frisked:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.IsFriskingStaff_Frisked }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      14. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>CCTV Report</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Arrival time of team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.CCTVTeam_ArivalTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; Number of Technical staff for CCTV installation:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_Tech_CCTV_Staff }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; Total no. of CCTV cameras installed:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_CCTV_Camera_Installed }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; CCTV installation location:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b></b> </td>
+        </tr>
+
+
+
+        <tr>
+          <td colspan="3" style="padding-top: 0;">
+            <table style="width: 100%;">
+              <tr>
+                <td style="width: 17%;">
+                 Entry : <b>{{ data.CCTV_at_Entry  }}</b></td>
+
+                <td style="width: 20%;">
+                  Exit : <b>{{ data.CCTV_at_Exit }}</b></td>
+
+                <td style="width: 26%;">
+                  Each Exam Room : <b>{{ data.CCTV_at_eachExamRoom }}</b> </td>
+
+                <td style="width: 30%;">
+                  Centre Supdt. Room : <b>{{ data.CCTV_at_CS_Room }}</b></td>
+              </tr>
+
+              <tr>
+                <td colspan="4">
+                  Any other : <b>{{ data.anyother_CCTV_location  }}</b></td>
+              </tr>
+
+
+            </table>
+          </td>
+        </tr>
+
+
+
+
+        <tr>
+          <td class="width-70">e)&nbsp; No. of CCTV cameras installed but dysfunctional (not worked):</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_NotWorking_Cameras }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">f)&nbsp; Whether I-cards of Team checked:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.CCTVTeam_ID_Checked }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      15. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>Jammer Report</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Arrival time of team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.JammerTeam_ArivalTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; No. of Technical staff for Jammers:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_techStaff_Jammer }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; Total no. of Jammers installed:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_Jammers_installed }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; Whether Jammers installed in each room or not:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.JammerInstalled_inEachRoom }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">e)&nbsp; Jammers not installed in how many rooms:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.Jammer_Not_Installed_in_Rooms }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">f)&nbsp; Number of Jammers installed but dysfunctional(not worked):</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_NotWorking_Jammers }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">g)&nbsp; Whether I-cards of Team checked:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.JammerTeam_ID_Checked }}</b> </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      16. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>Facial Scanning (if any)</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Arrival time of team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.facialTeam_ArivalTime }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; Number of members in team:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_FR_teamMembers }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; Number of Candidates Scanned:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_FR_candidate_Scanned }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; Number of mismatch cases (Roll No.):</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.fr_Missmatch }}</b> </td>
+        </tr>
+
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      17. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+
+        <tr>
+          <td class="width-70">Whether instructions were read over by Invigilator in the room:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.InstructionsReadByInvigilator }}</b> </td>
+        </tr>
+
+
+      </table>
+    </td>
+  </tr>
+
+
+
+
+
+
+
+
+  <tr>
+    <td class="td1-width">
+      18. &nbsp;
+    </td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>Sanitisation report</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">a)&nbsp; Whether complete sanitization of centre done:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.CompleteSanitization_done }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">b)&nbsp; No. of sanitizer dispensers at entrance:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_sanitizer_at_entry }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">c)&nbsp; No. of Sanitizers kept in rooms:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_sanitizer_keptInRoom }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">d)&nbsp; No. of gloves distributed to staff on duty:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_ofGloves_Distriputed_to_staff }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-70">e)&nbsp; No. of masks distributed:</td>
+          <td class="width-5"></td>
+          <td class="width-25"><b>{{ data.No_of_mask_distributed }}</b> </td>
+        </tr>
+
+
+      </table>
+    </td>
+  </tr>
+
+
+  </table>
+
+
+  <table class="table-width">
+
+  <tr>
+    <td class="td1-width"></td>
+    <td class="td2-width">
+      <table class="inner-table">
+        <tr>
+          <td colspan="2" style="width: 100%;">
+            <b>Detail of any Malpractice/Error</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="width-30">a)&nbsp; Incident (Detail):</td>
+          <td class="width-5"></td>
+          <td class="width-65"><b>{{ data.MalpracticeORerror_Incident_Details }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-30">b)&nbsp; FIR /DOR registered (Detail):</td>
+          <td class="width-5"></td>
+          <td class="width-65"><b>{{ data.MalpracticeORerror_FIR_DOR_Details }}</b> </td>
+        </tr>
+
+        <tr>
+          <td class="width-30">c)&nbsp; Any comment / suggestion:</td>
+          <td class="width-5"></td>
+          <td class="width-65"><b>{{ data.CommentsORsuggestion }}</b> </td>
+        </tr>
+
+
+      </table>
+    </td>
+  </tr>
+
+
+  </table>
+
+
+  <div class="horizontal-line"></div>
+
+  <table class="table-width">
+
+          <tr>
+            <td class="width-45">
+              <table style="width: 100%;">
+                <tr>
+                  <td colspan="3" style="width: 100%;">
+                    <b>HSSC Representative</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="width: 100%;">
+                    <div style="width: 65%;  padding-top: 14px;">
+                      <img src="{{data.HSSC_Rep_Sign}}"
+                      style="width: 100%;">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="width: 100%;">
+                    Signature
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="width: 45%;">
+                    Name:
+                  </td>
+                  <td style="width: 10%;">
+
+                  </td>
+                  <td style="width: 45%;">
+                    <b>{{data.HSSC_Representative_name}}</b>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="width: 45%;">
+                    Designation:
+                  </td>
+                  <td style="width: 10%;">
+
+                  </td>
+                  <td style="width: 45%;">
+                    <b>{{data.HSSC_Representative_Designation}}</b>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="width: 45%;">
+                    Name of Parent Department:
+                  </td>
+                  <td style="width: 10%;">
+
+                  </td>
+                  <td style="width: 45%;">
+                    <b>{{data.HSSC_Representative_Parent_Department}}</b>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="width: 45%;">
+                    Date:
+                  </td>
+                  <td style="width: 10%;">
+
+                  </td>
+                  <td style="width: 45%;">
+                    <b>{{data.HSSC_Sign_Date}}</b>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+            <td class="width-10"></td>
+            <td class="width-45">
+              <table class="signature-table">
+                <tr>
+                  <td colspan="3" style="width: 100%;">
+                    <b>Centre Superintendent</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="width: 100%;">
+                    <div style="width: 65%;  padding-top: 14px;">
+                      <img src="{{data.CSR_Sign}}"
+                      style="width: 100%;">
+                     </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="width: 100%;">
+                    Signature with Stamp
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="width: 45%;">
+                    Name:
+                  </td>
+                  <td style="width: 10%;">
+
+                  </td>
+                  <td style="width: 45%;">
+                    <b>{{data.CS_name}}</b>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="width: 45%;">
+                    Designation:
+                  </td>
+                  <td style="width: 10%;">
+
+                  </td>
+                  <td style="width: 45%;">
+                    <b>{{data.CS_Designation}}</b>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="width: 45%;">
+                    Date:
+                  </td>
+                  <td style="width: 10%;">
+
+                  </td>
+                  <td style="width: 45%;">
+                    <b>{{data.CS_Sign_Date}}</b>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+        </table>
+
+
+
+</body></html>
